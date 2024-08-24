@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script >
+
+    //CHAOTER 21 TO 25//
+    console.log("CHAPTER 21 TO 25");
+
+//question 1//
+
+let firstName = prompt("please enter your first name : ");
+let lastName = prompt("please enter your last name : ");
+let fullName = firstName + lastName;
+alert("HELLO" + fullName + "!");
+console.log("HELLO" + fullName + "!");
+
+
+//question 2//
+
+let favPhone = prompt("please enter your favorite mobile phone model : ");
+console.log( " my favourite phone model is : " + favPhone);
+console.log(" the length of string is " + favPhone.length);
+
+
+//question 3//
+
+let a = "pakistani";
+let index = a.indexOf("n");
+console.log(" the string is : " + a);
+console.log(" the index of n is : " + index);
+
+
+//question 4//
+
+let greet = "Hello World !";
+let lastIndex = greet.lastIndexOf("l");
+console.log("the string is " + greet);
+console.log(" the last index of l is : " + lastIndex);
+
+
+//question 5//
+
+console.log("the string is : " + a);
+let char = a[3];
+console.log("the character at index 3 is : " + char);
+
+//question 6//
+
+
+let fulName = firstName.concat(lastName);
+console.log("HELLO" + fullName + "!");
+
+//question 7//
+
+let city =" Hyderabad" ;
+console.log("the city is : " + city);
+let rep = city.replace("Hyder","Islam");
+console.log("the city after replacement is : " + rep);
+
+//question 8//
+
+let message = "Ali and Sami are best friends. They play cricket and football together.";
+let change = message.replaceAll("and","&");
+console.log(change);
+
+//question 9//
+
+let num = "472";
+console.log(typeof num + num);
+let convert = parseInt(num);
+console.log(typeof convert + convert);
+
+//question 10//
+
+let input = prompt("enter input : ");
+console.log("the user input is : " + input);
+let upperCase = input.toUpperCase();
+console.log("text in uppercase : " + upperCase);
+
+//question 11//
+
+let userInput = prompt("enter text : ");
+console.log(" the user input is " + userInput);
+let userUppercase = userInput;
+
+//question 12//
+
+let floatNumber = 35.67;
+let string = floatNumber.toString();
+console.log( "the number is " + string + "and the type is " + typeof(string) );
+let decimal = Math.trunc(floatNumber);
+console.log("the result is " + decimal);
+
+//question 13//
+
+function hasSpecialCharacter(username){
+    var specialCharacters = ['@','.',',','!'];
+    for(var i=0 ; i<specialCharacters.length ; i++){
+        if(username.indexOf(specialCharacters[i]) !== -1){
+            return true;
+        }
+    }
+    return false;
+}
+ let username = prompt("please enter your username");
+  
+ while(hasSpecialCharacter(username)){
+    alert("username contains special characters ['@' , ',' , '.' , '!'] . please enter a valid username");
+    username = prompt("enter your username");
+ }
+
+ alert("your valid username is " + username);
+ console.log("your valid username is " + username);
+
+
+
+
+//question 14//
+
+let foodItems = ["cake" , "apple pie" , "cookies" , "chips" , "patties"];
+let findItem = prompt("what do you want to order ? ").toLowerCase();
+let hasItem = foodItems.includes(findItem);
+if(hasItem){
+    console.log(`the item ${findItem} is available at index number ${foodItems.indexOf(findItem)}`);
+}else{
+    console.log(` Sorry , the item ${findItem} is not available .`)
+}
+
+
+//question 15//
+
+let password = prompt("please enter your password");
+if(password.length < 6){
+    alert("password must be at least 6 characters long.");
+    
+}
+if(!isNaN(password[0])){
+    alert("password should not start with a number.");
+}
+let charNum = /^[A-Za-z0-9]*$/;
+if(password.match(charNum)){ 
+}
+else{
+    alert("please enter a valid password containing both numbers and numbers");
+}
+
+
+//question 16//
+
+let name = "university of karachi";
+let array = name.split("");
+console.log(array);
+
+//question 17//
+
+let text = prompt("enter text of your choice");
+let lastChar = text.charAt(text.length - 1);
+console.log("the last character of the input is " + lastChar);
+
+//question 18//
+
+let givenText = "the quick brown fox jumps over the lazy dog.";
+console.log(givenText);
+console.log("the number of occurence of the in the text is " , (givenText.match(/the/g)).length );
+
+
+
+
+
+
+
+
+//CHAPTER 26 TO 30//
+console.log("CHAPTER 26 TO 30");
+
+
+//question 1//
+
+let posInt = prompt("please enter a positive integer");
+console.log("the user input integer is " + posInt);
+let round = Math.round(posInt);
+console.log("the roundoff number is " + round);
+let floor = Math.floor(posInt);
+console.log("the floor value of the number is " + floor);
+let ceil = Math.ceil(posInt);
+console.log("the ceil value of the number is " + ceil);
+
+//question 2//
+
+let negInt = prompt("enter any negative floating point number");
+console.log("the user input negative number is " + negInt);
+let roundOff = Math.round(negInt);
+console.log("the round off number is " + roundOff);
+let floorInt = Math.floor(negInt);
+console.log("the floor integer is " + floorInt);
+let ceilInt = Math.ceil(negInt);
+console.log("the ceil integer is " + ceilInt);
+
+//question 3//
+
+let integer = prompt("enter a number for it's absolute value ");
+console.log("the number for printing it's absolute value is " + integer);
+let absolute = Math.abs(integer);
+console.log("the absolute value for the number is " + absolute);
+
+//question 4//
+
+let random = Math.random();
+let number = (random * 6) + 1;
+let numberOfStars = Math.floor(number);
+console.log(numberOfStars);
+
+ //question 5//
+
+ let randomCoin = Math.random();
+ let toss = (randomCoin * 2)+1;
+ let coinToss = Math.floor(toss);
+ if(coinToss == 1){
+    console.log(" random coin value is 1 = tails");
+}
+else{
+    console.log("random coin value is 2 = heads");
+}
+
+//question 6//
+
+let ranNum = Math.random();
+let n = (ranNum *100)+1;
+console.log("the random number between 1 to 100 is " + Math.floor(n));
+
+//question 7//
+
+
+let weight = parseFloat(prompt("please enter your weight in kilograms"));
+console.log("your weight is " + weight);
+
+
+
+
+//question 8//
+
+let secretNum = 7;
+let guess = parseInt (prompt("guess the secret number from 1 to 10"));
+
+if(guess == secretNum){
+    alert("congratulations! you guessed the right number");
+    console.log("congratulation! you guessed it right");
+}
+else{
+    console.log("oops! you guessed it wrong . try again");
+    alert("oops! you guessed it wrong . try again.");
+}
+
+</script>
+</html>
